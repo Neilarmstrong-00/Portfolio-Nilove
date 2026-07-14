@@ -406,11 +406,10 @@ nav {
 
 /* --- TABLET OVERHAUL --- */
 @media (max-width: 1024px) {
-    .hero-grid { display: flex; flex-direction: column; gap: 3rem; text-align: center; }
-    .hero-info { display: contents; }
-    .hero-info-top { order: 1; display: flex; flex-direction: column; align-items: center; width: 100%; }
-    .hud-container { order: 2; min-height: 450px; max-width: 600px; margin: 0 auto; width: 100%; }
-    .hero-info-bottom { order: 3; display: flex; flex-direction: column; align-items: center; width: 100%; }
+    .hero-grid { display: flex; flex-direction: column; gap: 3rem; text-align: center; padding-top: 5rem; }
+    .hero-info-top { display: flex; flex-direction: column; align-items: center; width: 100%; }
+    .hud-container { min-height: 450px; max-width: 600px; margin: 0 auto; width: 100%; }
+    .hero-info-bottom { display: flex; flex-direction: column; align-items: center; width: 100%; margin-top: -1.5rem; }
     .hero-subtitle { border-left: none; border-bottom: 2px solid var(--accent-cyan); padding-left: 0; padding-bottom: 0.5rem; }
 }
 
@@ -418,8 +417,8 @@ nav {
 @media (max-width: 768px) {
     .container { padding: 0 1.5rem; }
     .cinematic-section { padding: 3rem 0; }
-    .hero-grid { gap: 2rem; min-height: auto; padding-top: 1rem; }
-    .hero-info-top, .hero-info-bottom { align-items: flex-start; text-align: left; }
+    .hero-grid { gap: 2rem; min-height: auto; padding-top: 4rem; }
+    .hero-info-top, .hero-info-bottom { align-items: flex-start; text-align: left; margin-top: 0; }
     .hero-title { font-size: 3.5rem; }
     .hud-container { min-height: 350px; }
     nav .nav-links { display: none; }
@@ -445,7 +444,7 @@ nav {
     .modal-title { font-size: 2rem; margin-bottom: 1rem;}
     .modal-header-info { flex-direction: column; gap: 1rem; }
     
-    .terminal-window { padding: 1.25rem; word-wrap: break-word; overflow-wrap: break-word; }
+    .terminal-window { padding: 1.25rem; word-wrap: break-word; word-break: break-all; overflow-wrap: break-word; }
     .terminal-input { font-size: 0.85rem; line-height: 1.6; margin-bottom: 1rem; }
     .terminal-prompt { font-size: 0.85rem; margin-bottom: 0.5rem; }
     .terminal-section { margin-top: 2rem; padding: 2rem 0; }

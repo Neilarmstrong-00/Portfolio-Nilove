@@ -65,6 +65,7 @@
     </nav>
 
     <!-- 01: SYSTEM (Hero) -->
+    <main>
     <section id="hero" class="cinematic-section">
         <div class="container hero-grid">
             <div class="hero-info">
@@ -584,9 +585,10 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- 06: TERMINAL CONTACT -->
-    <section class="terminal-section reveal" id="contact">
+    <footer class="terminal-section reveal" id="contact">
         <div class="container">
             <div class="terminal-window">
                 <div class="terminal-header">
@@ -603,7 +605,7 @@
                 <div class="terminal-prompt">[ COMMS_LINK_OPEN ] <span class="terminal-cursor"></span></div>
             </div>
         </div>
-    </section>
+    </footer>
 
     <!-- INFORMATION MODAL OVERLAY -->
     <div class="modal-overlay" id="infoModal" tabindex="-1" role="dialog" aria-modal="true">
@@ -677,24 +679,25 @@
         const hudPortrait = document.getElementById('hudPortrait');
         const hudBrackets = document.getElementById('hudBrackets');
         const cadBg = document.getElementById('cadBg');
-        const isMobile = window.innerWidth < 1024;
 
-        if (!isMobile) {
-            document.addEventListener('mousemove', (e) => {
+        document.addEventListener('mousemove', (e) => {
+            if (window.innerWidth >= 1024) {
                 const xAxis = (window.innerWidth / 2 - e.pageX) / 40;
                 const yAxis = (window.innerHeight / 2 - e.pageY) / 40;
                 if(hudPortrait) hudPortrait.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
                 if(hudBrackets) hudBrackets.style.transform = `translate(${-xAxis * 1.5}px, ${-yAxis * 1.5}px)`;
-                cadBg.style.backgroundPosition = `${e.pageX / -20}px ${e.pageY / -20}px`;
-            });
-        } else {
-            window.addEventListener('scroll', () => {
+                if(cadBg) cadBg.style.backgroundPosition = `${e.pageX / -20}px ${e.pageY / -20}px`;
+            }
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth < 1024) {
                 const scrollY = window.scrollY;
                 if(hudPortrait) hudPortrait.style.transform = `translateY(${scrollY * 0.02}px)`;
                 if(hudBrackets) hudBrackets.style.transform = `translateY(${scrollY * -0.02}px)`;
-                cadBg.style.backgroundPosition = `0px ${scrollY * 0.1}px`;
-            });
-        }
+                if(cadBg) cadBg.style.backgroundPosition = `0px ${scrollY * 0.1}px`;
+            }
+        });
 
         // --- DYNAMIC INFORMATION MODAL ---
         const modal = document.getElementById('infoModal');
@@ -719,7 +722,7 @@
             
             // Handle Media
             if(mediaSrc.includes('youtube.com')) {
-                modalMedia.innerHTML = `<iframe src="${mediaSrc}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                modalMedia.innerHTML = `<iframe src="${mediaSrc}" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
             } else if (mediaSrc.endsWith('.mp4')) {
                 modalMedia.innerHTML = `<video src="${mediaSrc}" autoplay muted controls loop playsinline></video>`;
             } else {
