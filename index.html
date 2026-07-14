@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilove Mandal | Robotics & CAD</title>
+    
+    <!-- SEO & Open Graph Tags -->
+    <meta name="description" content="Portfolio of Nilove Mandal - Mechanical Engineer & Roboticist specializing in full-cycle product design, 3D CAD modeling, and embedded C++ development for autonomous hardware.">
+    <meta property="og:title" content="Nilove Mandal | Robotics & Hardware Engineering">
+    <meta property="og:description" content="Bridging the gap between precision hardware design and intelligent software automation to build machines that think, move, and solve.">
+    <meta property="og:image" content="https://nilovemandal.site/img/assets/Nilove_Mandal_Open_Graph_meta_tag.png">
+    <meta property="og:url" content="https://nilovemandal.site">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/png" href="img/logos/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- Floating Background Animations -->
+    <div class="floating-bg-container">
+        <img src="img/projects/Logan1.webp" class="float-img" alt="">
+        <img src="img/projects/vajra_image.webp" class="float-img" alt="">
+        <img src="img/projects/Hootie1.webp" class="float-img" alt="">
+    </div>
+
+    <!-- Dynamic Blueprint Grid -->
+    <div class="cad-background" id="cadBg"></div>
+
+    <nav>
+        <div class="container nav-content">
+            <div style="font-family: var(--font-heading); font-size: 1.5rem; letter-spacing: 2px; z-index: 200; position: relative;">
+                <span class="text-orange">N.</span> MANDAL
+            </div>
+            
+            <!-- Desktop Nav -->
+            <div class="nav-links">
+                <a href="#hero">01_SYS</a>
+                <a href="#philosophy">02_ABOUT</a>
+                <a href="#experience">03_LOG</a>
+                <a href="#arsenal">04_ARSENAL</a>
+                <a href="#projects">05_SCHEMATICS</a>
+                <a href="img/docs/NILOVE_MANDAL_Resume.pdf" download class="text-cyan">RESUME</a>
+            </div>
+
+            <!-- Mobile Nav Hamburger -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-label="Toggle navigation" tabindex="0">
+                <i class="ph ph-list" id="menuIcon"></i>
+            </button>
+            
+            <!-- Mobile Menu Overlay -->
+            <div class="mobile-nav-overlay" id="mobileNav">
+                <div class="mobile-nav-links-wrapper">
+                    <a href="#hero" onclick="toggleMenu()">01_SYS</a>
+                    <a href="#philosophy" onclick="toggleMenu()">02_ABOUT</a>
+                    <a href="#experience" onclick="toggleMenu()">03_LOG</a>
+                    <a href="#arsenal" onclick="toggleMenu()">04_ARSENAL</a>
+                    <a href="#projects" onclick="toggleMenu()">05_SCHEMATICS</a>
+                    <a href="img/docs/NILOVE_MANDAL_Resume.pdf" download class="text-cyan" onclick="toggleMenu()">RESUME</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 01: SYSTEM (Hero) -->
+    <section id="hero" class="cinematic-section">
+        <div class="container hero-grid">
+            <div class="hero-info">
+                <div class="hero-info-top reveal">
+                    <div class="section-label">IDENTIFICATION</div>
+                </div>
+
+                <div class="hero-info-bottom reveal">
+                    <h1 class="hero-title">Nilove<br><span class="text-orange">Mandal</span></h1>
+                    <div class="hero-subtitle">MECHANICAL ENGINEER & ROBOTICIST</div>
+                    
+                    <p style="font-size: 1.1rem; color: var(--text-main); max-width: 500px; margin-bottom: 2rem;">
+                        Full-cycle product design from precision 3D CAD modeling to embedded C++ development for autonomous hardware.
+                    </p>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--accent-cyan); margin-bottom: 0.2rem;">[ SYS.MODULES_CAD ]</div>
+                        <div class="skill-grid">
+                            <span class="skill-badge">SolidWorks</span>
+                            <span class="skill-badge">Fusion 360</span>
+                            <span class="skill-badge">AutoCAD</span>
+                            <span class="skill-badge">Ansys</span>
+                            <span class="skill-badge">Siemens NX</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--accent-cyan); margin-bottom: 0.2rem;">[ SYS.MODULES_EMBEDDED ]</div>
+                        <div class="skill-grid">
+                            <span class="skill-badge"><i class="ph ph-cpu text-orange"></i> Raspberry Pi</span>
+                            <span class="skill-badge"><i class="ph ph-circuitry text-orange"></i> Arduino</span>
+                            <span class="skill-badge"><i class="ph ph-cube text-orange"></i> 3D Printing</span>
+                            <span class="skill-badge">C/C++</span>
+                            <span class="skill-badge">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hud-container reveal" id="hudContainer">
+                <div class="hud-brackets" id="hudBrackets"></div>
+                <div class="hud-ring hud-ring-1"></div>
+                <div class="hud-ring hud-ring-2"></div>
+                <img src="img/assets/nilove_portrait.png" alt="Nilove Mandal" class="hud-portrait" id="hudPortrait">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 02: CORE PHILOSOPHY & ABOUT -->
+    <section id="philosophy" class="cinematic-section" style="background: rgba(10,10,12,0.6); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 5rem 0;">
+        <div class="container text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="section-label reveal" style="justify-content: center; margin-bottom: 2rem;">SYSTEM_ARCHITECTURE</div>
+            <p class="philosophy-text reveal" style="margin-bottom: 3rem;">
+                "Bridging the gap between <span class="text-orange">precision hardware design</span> and <span class="text-cyan">intelligent software automation</span> to build machines that think, move, and solve."
+            </p>
+            
+            <!-- About Timeline Block -->
+            <div class="about-timeline reveal" style="max-width: 800px; text-align: left; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.05); padding: 2rem; border-radius: 8px;">
+                <h3 class="heading-industrial text-cyan" style="font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0, 243, 255, 0.2); padding-bottom: 0.5rem;"><i class="ph ph-user"></i> Operator Profile</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                    I am a Mechanical Engineer who evolved into a full-stack roboticist. My work spans the entire hardware lifecycle: from designing stress-tested space frames in SolidWorks, to fabricating components via additive manufacturing, to writing the C++ control logic that brings the system to life.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div>
+                        <div style="color: var(--accent-orange); font-family: var(--font-mono); font-size: 0.8rem;">CURRENT STATUS</div>
+                        <div style="color: var(--text-main);">B.E. Mechanical Engineering</div>
+                    </div>
+                    <div>
+                        <div style="color: var(--accent-orange); font-family: var(--font-mono); font-size: 0.8rem;">SPECIALIZATION</div>
+                        <div style="color: var(--text-main);">Mechatronics & Product Design</div>
+                    </div>
+                    <div>
+                        <div style="color: var(--accent-orange); font-family: var(--font-mono); font-size: 0.8rem;">LOCATION</div>
+                        <div style="color: var(--text-main);">India (Open to Relocation)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03: DEPLOYMENT LOG (Experience & Education) -->
+    <section id="experience" class="cinematic-section">
+        <div class="container">
+            <div class="section-label reveal">PROFESSIONAL_TIMELINE</div>
+            <h2 class="heading-industrial text-orange reveal" style="font-size: 4rem; margin-bottom: 1rem;">Deployment <span class="text-cyan">Log</span></h2>
+            
+            <div class="deployment-log reveal">
+                <!-- UrbanRoof -->
+                <div class="timeline-item">
+                    <div class="timeline-logo-chip">
+                        <img src="img/logos/urbanroof_logo.png" alt="UrbanRoof">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3>UrbanRoof Pvt Ltd</h3>
+                                <div class="timeline-role">Robotics CAD Designer Intern</div>
+                            </div>
+                            <div class="timeline-date">Jun 2026 – Present</div>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>(Deployment in progress) Translating architectural integration concepts into robust parametric models.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- ISRPL -->
+                <div class="timeline-item">
+                    <div class="timeline-logo-chip">
+                        <img src="img/logos/ISRPL_logo.png" alt="ISRPL">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3>Innovative Systems & Robotics India</h3>
+                                <div class="timeline-role">Design & Automation Intern</div>
+                            </div>
+                            <div class="timeline-date">Jun 2025 – Jul 2025</div>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Automated the batch conversion of 400+ SolidWorks drawing sheets to PDF using Task Scheduler, reducing manual documentation workload from several days to just 45 minutes.</li>
+                            <li>Designed and modelled a Cylinder Storage Rack with a custom crane assembly, generating comprehensive manufacturing drawings.</li>
+                            <li>Standardized internal part nomenclature for inventory tracking and updated Bills of Materials (BOMs) for Power Conveyor Systems.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Robo Solutions -->
+                <div class="timeline-item">
+                    <div class="timeline-logo-chip">
+                        <img src="img/logos/RS_logo.png" alt="Robo Solutions">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3>Robo Solutions</h3>
+                                <div class="timeline-role">Founder & Project Lead</div>
+                            </div>
+                            <div class="timeline-date">Aug 2023 – Present</div>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Direct an 8-member multidisciplinary engineering team focused on mechatronics development, robotics research, and software solutions.</li>
+                            <li>Manage end-to-end project lifecycles for 3+ major automation projects, overseeing hardware sourcing, firmware architecture, and mechanical design.</li>
+                            <li>Develop and conduct technical robotics workshops to educate peers on practical implementations of embedded systems and IoT architecture.</li>
+                            <li>Architected and deployed operational platforms: <a href="https://robosolution.vercel.app/" target="_blank" class="text-cyan">Main Portal</a>, <a href="https://robosolution-workshop.vercel.app/" target="_blank" class="text-cyan">Workshop Hub</a>, and <a href="https://robosolution-3d-printing.vercel.app/" target="_blank" class="text-cyan">3D Print Service</a>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- EDUCATION & LEADERSHIP GRID -->
+            <div class="edu-grid reveal">
+                <!-- Education Column -->
+                <div class="edu-card">
+                    <div class="edu-header">
+                        <i class="ph ph-graduation-cap"></i>
+                        <h3 class="heading-industrial text-orange">Academic Frame</h3>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-item-title">B.E. MECHANICAL ENGINEERING</div>
+                        <div class="edu-item-desc">Shri Sant Gajanan Maharaj College of Engineering, Shegaon</div>
+                        <div class="edu-item-meta">Graduation: May 2026 | Electives: Robotics, AI, Data Structures</div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-item-title">AWARDS & RECOGNITION</div>
+                        <div class="edu-item-desc">
+                            <ul class="timeline-bullets" style="margin-top:0.5rem;">
+                                <li><strong>1st Prize (Best Innovator)</strong> - HISET-2024 International Conference</li>
+                                <li><strong>2nd Prize (₹15,000)</strong> - IMPACT Conclave 3.0, IIT Ropar (Mar 2024)</li>
+                                <li><strong>Best Project Title</strong> - ROBOTHON, SGBAU (Oct 2023)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Leadership Column -->
+                <div class="edu-card">
+                    <div class="edu-header">
+                        <i class="ph ph-users"></i>
+                        <h3 class="heading-industrial text-orange">Leadership</h3>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-item-title">TECHNICAL INSTRUCTOR & FACILITATOR</div>
+                        <div class="edu-item-desc">
+                            <ul class="timeline-bullets" style="margin-top:0.5rem;">
+                                <li><strong>Lead Instructor</strong> - AI, ML & IoT Workshop (Mauli College, Mar 2026)</li>
+                                <li><strong>Workshop Facilitator</strong> - Gearing with Future Robotics (SSGMCE, Mar 2025)</li>
+                                <li><strong>Instructor</strong> - 3D Modelling in AR/VR (Mozilla Club, Apr 2023)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-item-title">EVENT MANAGEMENT</div>
+                        <div class="edu-item-desc">
+                            <ul class="timeline-bullets" style="margin-top:0.5rem;">
+                                <li><strong>Event Head, RC Race</strong> - Innovo’24, SSGMCE (Feb 2024)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04: TECHNICAL ARSENAL -->
+    <section id="arsenal" class="cinematic-section">
+        <div class="container">
+            <div class="section-label reveal">CAPABILITY_MATRIX</div>
+            <h2 class="heading-industrial text-cyan reveal" style="font-size: 4rem;">Technical Arsenal</h2>
+            
+            <div class="arsenal-grid reveal">
+                <div class="arsenal-card">
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;"><i class="ph ph-cpu text-cyan"></i> Hardware & IoT</h3>
+                    <div class="arsenal-chips-grid">
+                        <div class="arsenal-chip" title="Arduino">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/arduino.png" alt="Arduino">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="Raspberry Pi">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/raspberrypi.png" alt="Raspberry Pi">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="ESP32">
+                            <div class="arsenal-logo-wrapper" style="width: auto; padding: 0 20px; gap: 10px;">
+                                <i class="ph ph-cpu"></i>
+                                <span style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: bold; color: var(--text-main);">ESP32</span>
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="Drones / UAVs">
+                            <div class="arsenal-logo-wrapper" style="width: auto; padding: 0 20px; gap: 10px;">
+                                <i class="ph ph-drone"></i>
+                                <span style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: bold; color: var(--text-main);">Drones</span>
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="Lidar & IMU">
+                            <div class="arsenal-logo-wrapper" style="width: auto; padding: 0 20px; gap: 10px;">
+                                <i class="ph ph-broadcast"></i>
+                                <span style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: bold; color: var(--text-main);">Lidar/IMU</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arsenal-card">
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;"><i class="ph ph-code text-orange"></i> Software Control</h3>
+                    <div class="arsenal-chips-grid">
+                        <div class="arsenal-chip" title="C++">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/c++.png" alt="C++">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="Python">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/python.png" alt="Python">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="OpenCV">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/opencv.png" alt="OpenCV">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="VS Code">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/vscode.png" alt="VS Code">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="HTML5">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/html.png" alt="HTML5">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="CSS3">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/css.png" alt="CSS3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arsenal-card">
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;"><i class="ph ph-wrench text-cyan"></i> CAD & Fab</h3>
+                    <div class="arsenal-chips-grid">
+                        <div class="arsenal-chip" title="SolidWorks">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/solidworks.png" alt="SolidWorks">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="Fusion 360">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/fusion360.png" alt="Fusion 360">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="Siemens NX">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/nx.png" alt="Siemens NX">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="AutoCAD">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/autocad.png" alt="AutoCAD">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="Ansys">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/ansys.png" alt="Ansys">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="Blender">
+                            <div class="arsenal-logo-wrapper">
+                                <img src="img/software%20logos/blender.png" alt="Blender">
+                            </div>
+                        </div>
+                        <div class="arsenal-chip" title="FDM 3D Printing">
+                            <div class="arsenal-logo-wrapper" style="width: auto; padding: 0 20px; gap: 10px;">
+                                <i class="ph ph-cube"></i>
+                                <span style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: bold; color: var(--text-main);">3D Printing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05: SCHEMATICS (Categorized Projects) -->
+    <section id="projects" class="cinematic-section">
+        <div class="container">
+            <div class="section-label reveal">HARDWARE_SCHEMATICS</div>
+            <h2 class="heading-industrial reveal" style="font-size: 4rem;">Project <span class="text-orange">Showcase</span></h2>
+            
+            <!-- Category 1: Robotics -->
+            <h3 class="category-title text-cyan reveal">[ AERIAL & GROUND ROBOTICS ]</h3>
+            <div class="projects-grid flex-grid">
+                
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('Vajra 2.1: Precision Agrochemical Drone', '2024', 'AERIAL_UAV', 'A teleoperated 4WD agricultural rover designed for hazardous pesticide application. Re-engineered an estimated ₹18k tank down to a ₹9.4k build using aluminum extrusion and a repurposed diesel tank. Validated at 3 km/hr field speeds with a 400W MOSFET PWM spray control.', 'ESP32, PWM Control, Extrusion', 'img/vajra_2.1.mp4', 'img/docs/NILOVE_MANDAL_Portfoio.pdf#page=11')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/vajra_image.webp');"></div>
+                        <img src="img/projects/vajra_image.webp" class="project-card-image" loading="lazy" alt="Vajra Drone">
+                        <span class="project-tag">AERIAL_UAV</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">Vajra 2.1 Drone</h4>
+                        <p class="project-card-brief">A teleoperated agricultural rover featuring a cost-reduced ₹9.4k DFM chassis and 400W MOSFET PWM spray control. Validated at 3 km/hr.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('Industrial Kuli', '2023', 'AGV_SYSTEMS', 'Synchronized Crab-Steering AGV utilizing a 300mm Trapezoidal Lead Screw to reduce actuator counts by 75%. Achieved mechanical synchronization of 4-wheel steering angles with <2% error variance.', 'Mechanical Design, Hybrid Nav', 'img/projects/IK.webp', 'img/docs/NILOVE_MANDAL_Portfoio.pdf#page=4')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/IK.webp');"></div>
+                        <img src="img/projects/IK.webp" class="project-card-image" loading="lazy" alt="Industrial Kuli">
+                        <span class="project-tag">AGV_SYSTEMS</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">Industrial Kuli</h4>
+                        <p class="project-card-brief">Synchronized Crab-Steering AGV utilizing a 300mm Trapezoidal Lead Screw to achieve mechanical synchronization with <2% error variance.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('Trinetra V-Clean', '2023', 'SOLAR_ROBOT', 'Autonomous, vision-guided maintenance robot featuring a proprietary pivoting wheel drive system for zero-radius holonomic edge transitions. Uses camera-based hotspot detection for targeted pathways.', 'Edge Detection, Linkage, CV', 'img/projects/TN.webp', 'img/docs/NILOVE_MANDAL_Portfoio.pdf#page=17')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/TN.webp');"></div>
+                        <img src="img/projects/TN.webp" class="project-card-image" loading="lazy" alt="Trinetra">
+                        <span class="project-tag">SOLAR_ROBOT</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">Trinetra V-Clean</h4>
+                        <p class="project-card-brief">Autonomous cleaning robot featuring a pivoting wheel drive train for zero-radius holonomic edge transitions and camera-based hotspot detection.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Category 2: IoT -->
+            <h3 class="category-title text-orange reveal">[ IOT & SMART AUTOMATION ]</h3>
+            <div class="projects-grid flex-grid">
+                
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('Smart Breathe', '2024', 'MEDICAL_IOT', 'A ₹8,500 low-cost adaptive ventilator with Tele-ICU telemetry. Automates a 1600ml Ambu bag using a Nema-17 stepper, validating an air discharge of 4.28 Liters/min with a SpO2 bio-feedback loop.', 'Bio-Feedback, Nema-17, IoT', 'img/projects/SMB.webp', 'img/docs/NILOVE_MANDAL_Portfoio.pdf#page=13')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/SMB.webp');"></div>
+                        <img src="img/projects/SMB.webp" class="project-card-image" loading="lazy" alt="Smart Breathe">
+                        <span class="project-tag">MEDICAL_IOT</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">Smart Breathe</h4>
+                        <p class="project-card-brief">A ₹8,500 adaptive ventilator validating 4.28 Liters/min of air discharge. Features a SpO2 bio-feedback loop and Tele-ICU telemetry dashboard.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('Wi-Fi Biometric Sync', '2023', 'DATA_LOGGING', 'Direct-to-Cloud attendance system. Hacked the Google Sheets API via Google Apps Script to allow an ESP8266 to append rows directly without an intermediate PC, reducing logging time to <2 seconds.', 'REST API, ESP8266, Sheets', 'img/projects/Biometric_Project.webp', 'img/docs/NILOVE_MANDAL_Portfoio.pdf#page=21')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/Biometric_Project.webp');"></div>
+                        <img src="img/projects/Biometric_Project.webp" class="project-card-image" loading="lazy" alt="Biometric">
+                        <span class="project-tag">DATA_LOGGING</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">Biometric Sync</h4>
+                        <p class="project-card-brief">Hacked the Google Sheets API via Apps Script to allow an ESP8266 to append biometric data directly to the cloud. Logging reduced to <2 seconds.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('Precision Seeding Unit', '2023', 'AGRI_TECH', 'IoT-enabled precision seeding rig featuring a custom Batch-Check algorithm that re-verifies soil conditions via probe every 10 seeds, ensuring 100% of planted crops hit viable growth environments.', 'Moisture Sensors, Algorithms', 'img/projects/sso.webp', 'img/docs/NILOVE_MANDAL_Portfoio.pdf#page=19')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/sso.webp');"></div>
+                        <img src="img/projects/sso.webp" class="project-card-image" loading="lazy" alt="Seeding">
+                        <span class="project-tag">AGRI_TECH</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">IoT Seeding Unit</h4>
+                        <p class="project-card-brief">Automated Gatekeeper rig enforcing a Batch-Check algorithm that re-verifies soil moisture every 10 seeds, preventing dead germination.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('Smart AC Switcher', '2024', 'POWER_ELECTRONICS', 'Solid-state arbitration system deployed and verified in a live multi-house setup. Routes power based on pre-defined priority logic, handling heavy inductive loads without contact welding or logic failure.', 'Load Balancing, Priority Logic', 'img/projects/SACs.webp', 'img/docs/NILOVE_MANDAL_Portfoio.pdf#page=20')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/SACs.webp');"></div>
+                        <img src="img/projects/SACs.webp" class="project-card-image" loading="lazy" alt="AC Switcher">
+                        <span class="project-tag">POWER_ELECTRONICS</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">Smart AC Arbiter</h4>
+                        <p class="project-card-brief">Solid-state arbitration system fully deployed in a live multi-house setup to manage inductive loads based on supply availability and priority logic.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('Numatic Response HydroGauge', '2023', 'SENSOR_SYSTEM', 'Pneumatic isolation system for corrosive tanks. Engineered a temperature-compensation algorithm that linearizes bladder elasticity offset, significantly improving accuracy over standard hydrostatic probes.', 'Pneumatics, Hydrostatics', 'img/projects/NRHG_5_1.webp', 'img/docs/NILOVE_MANDAL_Portfoio.pdf#page=12')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/NRHG_5_1.webp');"></div>
+                        <img src="img/projects/NRHG_5_1.webp" class="project-card-image" loading="lazy" alt="HydroGauge">
+                        <span class="project-tag">SENSOR_SYSTEM</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">HydroGauge Sensor</h4>
+                        <p class="project-card-brief">Pneumatic isolation system for corrosive tanks featuring a temperature-compensation algorithm that linearizes bladder elasticity offset.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Category 3: Product Design -->
+            <h3 class="category-title text-cyan reveal">[ AI & PRODUCT DESIGN ]</h3>
+            <div class="projects-grid flex-grid">
+                
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('Hootie Robot', '2023', 'AI_COMPANION', 'Biomimetic IoT Companion executing a C++ state machine on an ESP. Features a capacitive-touch Joy Protocol, live OpenWeatherMap API integration, and a flawless snap-fit chassis perfected across 12 iterative versions.', 'C++, Animatronics, 3D Printing', 'img/projects/Hootie1.webp', 'img/docs/NILOVE_MANDAL_Portfoio.pdf#page=6')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/Hootie1.webp');"></div>
+                        <img src="img/projects/Hootie1.webp" class="project-card-image" loading="lazy" alt="Hootie">
+                        <span class="project-tag">AI_COMPANION</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">Hootie Desktop Bot</h4>
+                        <p class="project-card-brief">Biomimetic IoT companion featuring a capacitive-touch Joy Protocol, C++ state machine, OpenWeather API, and a chassis perfected over 12 versions.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('Avibhuj SAE ATV', '2023', 'VEHICLE_DESIGN', 'Lead CAE evaluation for an AISI 4130 tubular space frame. Achieved a Safety Factor of 2.97 against a 13,500N frontal impact load while successfully restricting total chassis weight to 30kg with a 3.5 kNm/degree stiffness.', 'ANSYS FEA, CATIA, Welding', 'img/projects/Logan1.webp', 'img/docs/NILOVE_MANDAL_Portfoio.pdf#page=15')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/Logan1.webp');"></div>
+                        <img src="img/projects/Logan1.webp" class="project-card-image" loading="lazy" alt="Logan/Avibhuj">
+                        <span class="project-tag">VEHICLE_DESIGN</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">SAE ATV Roll Cage</h4>
+                        <p class="project-card-brief">Optimized AISI 4130 space frame. Achieved an SF of 2.97 against a 13,500N load while maintaining a 30kg chassis and >3.5 kNm/degree stiffness.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('Anti-Fog Face Shield', '2021', 'ERGONOMICS', 'Research-driven PPE optimizing ergonomics and optics. Conducted comparative research on material coatings and shield geometry to maintain 95%+ visible light transmission while entirely mitigating breath condensation.', 'Ergonomics, Material Science', 'img/projects/AFM.webp', 'img/docs/NILOVE_MANDAL_Portfoio.pdf#page=23')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/AFM.webp');"></div>
+                        <img src="img/projects/AFM.webp" class="project-card-image" loading="lazy" alt="Face Shield">
+                        <span class="project-tag">ERGONOMICS</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">Anti-Fog PPE</h4>
+                        <p class="project-card-brief">Conducted comparative research on shield geometry and coatings to maintain 95%+ visible light transmission while eliminating breath condensation.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('SSGMCE Campus 3D', '2023', '3D_MODELING', 'Comprehensive 3D environment modelling of a college campus designed for virtual tours and promotional walkthroughs. Accurately recreated major structures and topographies.', 'Blender, Virtual Tours', 'img/projects/collageB.webp', 'img/docs/NILOVE_MANDAL_Portfoio.pdf')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/collageB.webp');"></div>
+                        <img src="img/projects/collageB.webp" class="project-card-image" loading="lazy" alt="Campus">
+                        <span class="project-tag">3D_MODELING</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">Campus 3D Model</h4>
+                        <p class="project-card-brief">Comprehensive 3D environment modelling of the college campus, accurately recreating structures and topology for virtual tours.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')this.click()" onclick="openProjectModal('Blender Bloom Tech', '2022', 'VFX_TECH', 'Devised a post-processing method for achieving Bloom effects with transparency in the Eevee renderer using custom alpha channels for seamless After Effects/Premiere compositing.', 'Compositing, Python, VFX', 'https://www.youtube.com/embed/0VusEoprpXw', 'https://youtu.be/0VusEoprpXw')">
+                    <div class="project-card-image-container">
+                        <div class="project-card-image-bg" style="background-image: url('img/projects/Bar.webp');"></div>
+                        <img src="img/projects/Bar.webp" class="project-card-image" loading="lazy" alt="Blender">
+                        <span class="project-tag">VFX_TECH</span>
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-card-title">Blender Compositing</h4>
+                        <p class="project-card-brief">Devised a post-processing method for achieving Bloom effects with transparency in the Eevee renderer for seamless AE/Premiere compositing.</p>
+                        <button class="project-btn" tabindex="-1">KNOW MORE</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 06: TERMINAL CONTACT -->
+    <section class="terminal-section reveal" id="contact">
+        <div class="container">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span style="background: #ff5f56;"></span>
+                    <span style="background: #ffbd2e;"></span>
+                    <span style="background: #27c93f;"></span>
+                </div>
+                <div class="terminal-prompt">admin@NILOVE-SYS:~$ ./initiate_contact.sh</div>
+                <div class="terminal-input">
+                    > STATUS: <span class="text-cyan">READY FOR COLLABORATION</span><br>
+                    > LINKEDIN: <a href="https://linkedin.com/in/nilove-mandal" class="text-orange" style="text-decoration: none;" tabindex="0">linkedin.com/in/nilove-mandal</a><br>
+                    > EMAIL: <a href="mailto:nilovemandal@gmail.com" class="text-orange" style="text-decoration: none;" tabindex="0">nilovemandal@gmail.com</a>
+                </div>
+                <div class="terminal-prompt">[ COMMS_LINK_OPEN ] <span class="terminal-cursor"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMATION MODAL OVERLAY -->
+    <div class="modal-overlay" id="infoModal" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProjectModal()" aria-label="Close modal" tabindex="0"><i class="ph ph-x"></i></button>
+            
+            <div class="modal-media-container" id="modalMedia">
+                <!-- Media injected via JS -->
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-header-info">
+                    <h2 class="modal-title" id="modalTitle">Project Title</h2>
+                    <span class="modal-year" id="modalYear">2024</span>
+                </div>
+                
+                <div class="modal-tags" id="modalTags">
+                    <!-- Tags injected via JS -->
+                </div>
+                
+                <p class="modal-brief" id="modalBrief">Brief description goes here...</p>
+                
+                <a href="#" target="_blank" class="modal-readmore-btn" id="modalReadMore" tabindex="0">
+                    <i class="ph ph-file-pdf"></i> Read Full Documentation
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Hamburger Menu Logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const menuIcon = document.getElementById('menuIcon');
+
+        function toggleMenu() {
+            mobileNav.classList.toggle('active');
+            const isActive = mobileNav.classList.contains('active');
+            mobileMenuBtn.setAttribute('aria-expanded', isActive);
+            if (isActive) {
+                menuIcon.classList.remove('ph-list');
+                menuIcon.classList.add('ph-x');
+            } else {
+                menuIcon.classList.remove('ph-x');
+                menuIcon.classList.add('ph-list');
+            }
+        }
+        
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileMenuBtn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        // Scroll Reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            });
+        }, revealOptions);
+        reveals.forEach(reveal => revealOnScroll.observe(reveal));
+
+        // HUD & Background Parallax
+        const hudPortrait = document.getElementById('hudPortrait');
+        const hudBrackets = document.getElementById('hudBrackets');
+        const cadBg = document.getElementById('cadBg');
+        const isMobile = window.innerWidth < 1024;
+
+        if (!isMobile) {
+            document.addEventListener('mousemove', (e) => {
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 40;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 40;
+                if(hudPortrait) hudPortrait.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
+                if(hudBrackets) hudBrackets.style.transform = `translate(${-xAxis * 1.5}px, ${-yAxis * 1.5}px)`;
+                cadBg.style.backgroundPosition = `${e.pageX / -20}px ${e.pageY / -20}px`;
+            });
+        } else {
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                if(hudPortrait) hudPortrait.style.transform = `translateY(${scrollY * 0.02}px)`;
+                if(hudBrackets) hudBrackets.style.transform = `translateY(${scrollY * -0.02}px)`;
+                cadBg.style.backgroundPosition = `0px ${scrollY * 0.1}px`;
+            });
+        }
+
+        // --- DYNAMIC INFORMATION MODAL ---
+        const modal = document.getElementById('infoModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalYear = document.getElementById('modalYear');
+        const modalBrief = document.getElementById('modalBrief');
+        const modalTags = document.getElementById('modalTags');
+        const modalMedia = document.getElementById('modalMedia');
+        const modalReadMore = document.getElementById('modalReadMore');
+
+        function openProjectModal(title, year, tag, brief, tagsCSV, mediaSrc, docLink) {
+            modalTitle.innerText = title;
+            modalYear.innerText = year;
+            modalBrief.innerText = brief;
+            
+            // Build Tags
+            const tagArray = tagsCSV.split(',');
+            modalTags.innerHTML = `<span style="border-color: var(--accent-orange); color: var(--accent-orange);">${tag}</span>`;
+            tagArray.forEach(t => {
+                modalTags.innerHTML += `<span>${t.trim()}</span>`;
+            });
+            
+            // Handle Media
+            if(mediaSrc.includes('youtube.com')) {
+                modalMedia.innerHTML = `<iframe src="${mediaSrc}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            } else if (mediaSrc.endsWith('.mp4')) {
+                modalMedia.innerHTML = `<video src="${mediaSrc}" autoplay muted controls loop playsinline></video>`;
+            } else {
+                modalMedia.innerHTML = `<img src="${mediaSrc}" alt="${title}">`;
+            }
+            
+            // Set Documentation Link
+            modalReadMore.href = docLink;
+            
+            // Open Modal
+            modal.classList.add('active');
+            document.body.classList.add('modal-open');
+            modal.focus();
+        }
+
+        function closeProjectModal() {
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+            // Clear media to stop videos playing in background
+            setTimeout(() => { modalMedia.innerHTML = ''; }, 300);
+        }
+
+        // Close modal on outside click
+        modal.addEventListener('click', (e) => {
+            if(e.target === modal) closeProjectModal();
+        });
+        
+        // Escape key to close modal and menu
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (modal.classList.contains('active')) {
+                    closeProjectModal();
+                }
+                if (mobileNav.classList.contains('active')) {
+                    toggleMenu();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
