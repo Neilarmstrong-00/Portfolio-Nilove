@@ -407,9 +407,10 @@ nav {
 /* --- TABLET OVERHAUL --- */
 @media (max-width: 1024px) {
     .hero-grid { display: flex; flex-direction: column; gap: 3rem; text-align: center; padding-top: 5rem; }
-    .hero-info-top { display: flex; flex-direction: column; align-items: center; width: 100%; }
-    .hud-container { min-height: 450px; max-width: 600px; margin: 0 auto; width: 100%; }
-    .hero-info-bottom { display: flex; flex-direction: column; align-items: center; width: 100%; margin-top: -1.5rem; }
+    .hero-info { display: contents; }
+    .hero-info-top { order: 1; display: flex; flex-direction: column; align-items: center; width: 100%; }
+    .hud-container { order: 2; min-height: 450px; max-width: 600px; margin: 0 auto; width: 100%; }
+    .hero-info-bottom { order: 3; display: flex; flex-direction: column; align-items: center; width: 100%; margin-top: -1.5rem; }
     .hero-subtitle { border-left: none; border-bottom: 2px solid var(--accent-cyan); padding-left: 0; padding-bottom: 0.5rem; }
 }
 
