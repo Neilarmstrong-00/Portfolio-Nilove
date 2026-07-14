@@ -439,7 +439,7 @@ nav {
     .timeline-header { flex-direction: column; }
     .edu-grid { grid-template-columns: 1fr; gap: 2rem; }
     
-    .modal-content { width: 95%; max-height: 95vh; margin-top: 2rem;}
+    .modal-content { width: 95%; max-height: 85vh; margin-top: 0; }
     .modal-media-container { height: 250px; }
     .modal-body { padding: 1.5rem; }
     .modal-title { font-size: 2rem; margin-bottom: 1rem;}
